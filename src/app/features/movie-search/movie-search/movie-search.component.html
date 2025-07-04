@@ -1,0 +1,6 @@
+<section class="search-box">
+    <form class="form-box" (submit)="onSearch($event)">
+        <input type="text" placeholder="Digite o nome do filme" [(ngModel)]="searchTerm" name="searchTerm" required>
+        <button class="btn buscar" type="submit">Buscar</button>
+    </form>
+</section>

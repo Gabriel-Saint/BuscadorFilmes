@@ -1,0 +1,15 @@
+<section>
+  <h2>Resultados da pesquisa | {{ movies.length }} encontrados</h2>
+  <ul>
+    @for(movie of movies; track movie) {
+      <li>
+        <article class="filme">
+          <h3 title="{{ movie.Title }}">{{ movie.Title }}</h3>
+          <img [src]="movie.Poster" alt="{{ movie.Title }}">
+          <p><strong>Ano:</strong> {{ movie.Year }}</p>
+          <button class="btn-detalhes">Ver detalhes</button>
+        </article>
+      </li>
+    }
+  </ul>
+</section>
