@@ -1,0 +1,38 @@
+<header>
+  <h2 mat-dialog-title>
+    {{ getData()?.Title }}
+  </h2>
+  <button (click)="closeModal()" aria-label="Fechar modal">
+    <img src="icons/close.svg" alt="Botão para fechar o modal">
+  </button>
+</header>
+
+<mat-dialog-content>
+
+  <img [src]="getData()?.Poster" alt="Pôster do filme" width="100%" style="border-radius: 8px; margin-bottom: 1rem;" />
+
+  <section>
+    <p><strong>Ano:</strong> {{ getData()?.Year }}</p>
+    <p><strong>Duração:</strong> {{ getData()?.Runtime }}</p>
+    <p><strong>Gênero:</strong> {{ getData()?.Genre }}</p>
+    <p><strong>Diretor:</strong> {{ getData()?.Director }}</p>
+    <p><strong>Atores:</strong> {{ getData()?.Actors }}</p>
+    <p><strong>Idioma:</strong> {{ getData()?.Language }}</p>
+    <p><strong>País:</strong> {{ getData()?.Country }}</p>
+    <p><strong>Bilheteria:</strong> {{ getData()?.BoxOffice }}</p>
+    <p><strong>Premiações:</strong> {{ getData()?.Awards }}</p>
+  </section>
+
+  <h3 style="margin-top: 1.5rem;">Sinopse</h3>
+  <p>{{ getData()?.Plot }}</p>
+
+  <h3 style="margin-top: 1.5rem;">Avaliações</h3>
+  <ul>
+    @for (rating of getData()?.Ratings; track rating) {
+      <li>
+        <strong>{{ rating.Source }}:</strong> {{ rating.Value }}
+      </li>
+    }
+  </ul>
+
+</mat-dialog-content>

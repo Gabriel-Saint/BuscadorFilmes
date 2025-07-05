@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MovieSearchComponent } from "../../movie-search/movie-search/movie-search.component";
-import { MovieResultsComponent } from "../../movie-results/movie-results/movie-results.component";
+import { MovieResultsComponent } from "../../movie-results/movie-results.component";
 import { IMovie } from '../../../interfaces/movie/movie.interface';
 import { OmdbService } from '../../../core/service/omdb.service';
 
