@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environments';
+import { environment } from '../../environments/environments.prod';
 import { IMovie } from '../../interfaces/movie/movie.interface';
 import { IMovieResponse } from '../../interfaces/movie/movieResponse.interface';
 import { Observable } from 'rxjs';
